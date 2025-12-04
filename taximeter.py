@@ -23,3 +23,18 @@ def taximeter():
     moving_time = 0
     state = None  # 'stopped' o 'moving'
     state_start_time = 0
+
+    while True:
+        command = input("> ").strip().lower()
+
+        if command == "start":
+            if trip_active:
+                print("Error: A trip is already in progress.")
+                continue
+            trip_active = True
+            start_time = time.time()
+            stopped_time = 0
+            moving_time = 0
+            state = 'stopped'  # Iniciamos en estado 'stopped'
+            state_start_time = time.time()
+            print("Trip started. Initial state: 'stopped'.")
