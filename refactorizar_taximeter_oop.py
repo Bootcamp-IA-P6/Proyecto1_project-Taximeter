@@ -1,7 +1,6 @@
 import time
 import logging
 
-
 # ==============================================
 # Logger OOP
 # ==============================================
@@ -39,13 +38,10 @@ class Trip:
         self.stopped_time = 0.0
         self.moving_time = 0.0
 
-        self.state = "stopped"  # Estado inicial
+        self.state = "stopped"
         self.state_start_time = time.time()
 
     def change_state(self, new_state):
-        """
-        Cambia de 'stopped' a 'moving' o viceversa y acumula tiempo.
-        """
         now = time.time()
         elapsed = now - self.state_start_time
 
@@ -60,9 +56,6 @@ class Trip:
         return elapsed
 
     def finish(self):
-        """
-        Finaliza el viaje y devuelve la tarifa total.
-        """
         now = time.time()
         elapsed = now - self.state_start_time
 
@@ -152,14 +145,12 @@ class TaximeterApp:
         total_fare = self.current_trip.finish()
         data = self.current_trip.to_dict()
 
-        # Output
         print("\n--- Resumen del viaje ---")
         print(f"Tiempo detenido: {data['stopped_time']:.1f} segundos")
         print(f"Tiempo en movimiento: {data['moving_time']:.1f} segundos")
         print(f"Tarifa total: €{data['total_fare']:.2f}")
         print("-------------------------\n")
 
-        # Save and log
         self.storage.save(self.current_trip)
         self.logger.info(f"Viaje finalizado. Tarifa: €{total_fare:.2f}")
 
@@ -190,8 +181,33 @@ class TaximeterApp:
 
 
 # ==============================================
+# Autenticación
+# ==============================================
+def authenticate():
+    """
+    Solicita usuario y contraseña antes de permitir el acceso.
+    """
+    USER = "admin"       # Usuario autorizado
+    PASSWORD = "1234"    # Contraseña autorizada
+
+    print("=== Autenticación requerida ===")
+    username = input("Usuario: ")
+    password = input("Contraseña: ")
+
+    if username == USER and password == PASSWORD:
+        print("Acceso concedido.\n")
+        return True
+    else:
+        print("Acceso denegado. Usuario o contraseña incorrectos.")
+        return False
+
+
+# ==============================================
 # Main
 # ==============================================
 if __name__ == "__main__":
-    app = TaximeterApp()
-    app.run()
+    if authenticate():       # Se autentica antes de iniciar la app
+        app = TaximeterApp()
+        app.run()
+    else:
+        exit()
