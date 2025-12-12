@@ -21,3 +21,6 @@ Level Expert
 2 Dockerize the application: Package the app and its dependencies to facilitate deployment and portability.
 
 3 Web version: Create an internet-accessible interface so the taximeter can be used in web browsers.
+
+TEST UNIT.
+The code proves that the taximeter counts the seconds correctly and calculates the final cost accurately.>>>>
