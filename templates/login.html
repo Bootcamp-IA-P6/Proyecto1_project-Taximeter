@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login - Taximeter</title>
+      <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="login-page">
+    <div class="container">
+    <h1>Bienvenido a tu taximetro</h1>
+    <p>Es importante que ingreses tu usuario y contraseña</p>
+    {% if error %}
+    <p style="color:red;">{{ error }}</p>
+    {% endif %}
+    <form method="POST">
+        Usuario: <input type="text" name="username"><br>
+        Contraseña: <input type="password" name="password"><br>
+        <button type="submit">Entrar</button>
+    </form>
+    </div>
+</body>
+</html>

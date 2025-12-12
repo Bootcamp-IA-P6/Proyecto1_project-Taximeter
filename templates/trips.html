@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista de viajes</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+<body class="trips-taximeter">
+    <h1>Lista de viajes</h1>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Inicio</th>
+            <th>Detenido</th>
+            <th>Moviendo</th>
+            <th>Total (€)</th>
+        </tr>
+        {% for trip in trips %}
+        <tr>
+            <td>{{ trip[0] }}</td>
+            <td>{{ trip[1] }}</td>
+            <td>{{ "%.1f"|format(trip[2]) }}</td>
+            <td>{{ "%.1f"|format(trip[3]) }}</td>
+            <td>{{ "%.2f"|format(trip[4]) }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <p><a href="{{ url_for('index') }}">Volver</a></p>
+</body>
+</html>
