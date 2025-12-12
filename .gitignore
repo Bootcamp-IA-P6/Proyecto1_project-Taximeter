@@ -1,3 +1,11 @@
+doc/implement-loggins
+venv/
+*.pyc
+__pycache__/
+*.db
+*.log
+logs/
+=======
  feature/middle-level-project-taximeter
 #Ignorando entorno virtual 
 
@@ -10,3 +18,4 @@ venv/
 
 
 main
+ feature/middle-level-project-taximeter
