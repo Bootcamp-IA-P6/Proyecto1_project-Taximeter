@@ -1,0 +1,266 @@
+
+body{
+    font-family: Arial, sans-serif;
+    background: #f2f2f2;
+
+    /* Centrar todo */
+    display: flex;
+    flex-direction: column;  /* H1 arriba, form abajo */
+    justify-content: center;
+    align-items: center;
+
+    height: 100vh;
+    margin: 0;
+}
+
+h1{
+    margin-bottom: 20px;
+}
+
+form{
+    background: white;
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgba(0,0,0,0.15);
+    width: 380px;
+}
+
+
+
+/* Formulario y botones verticales */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+form button {
+    display: block;
+    width: 100%;
+    padding: 14px 0;
+    border: none;
+    border-radius: 12px;
+    background: #2563eb;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+form button:hover {
+    background: #1d4ed8;
+    transform: scale(1.03);
+}
+
+/* Enlaces como botones */
+/* Estilo de botones para enlaces */
+a.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #2563eb; /* azul */
+    color: white;
+    font-weight: 600;
+    border-radius: 12px;
+    text-decoration: none;
+    text-align: center;
+    transition: background 0.3s ease, transform 0.2s ease;
+    margin: 5px 0; /* separa un poco los botones */
+}
+
+a.btn:hover {
+    background-color: #1d4ed8; /* azul más oscuro al pasar el mouse */
+    transform: scale(1.03);
+}
+
+
+/* Responsive para móviles */
+@media (max-width: 480px) {
+    .container {
+        padding: 30px 20px;
+    }
+
+    header h1 {
+        font-size: 20px;
+    }
+
+    form button {
+        font-size: 14px;
+        padding: 12px 0;
+    }
+
+    .links .link-btn {
+        font-size: 14px;
+        padding: 10px 0;
+    }
+}
+
+/* Estilos generales */
+body.login-page {
+    font-family: Arial, sans-serif;
+    background: #f0f4ff; /* azul muy claro de fondo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Contenedor centrado */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Títulos y párrafos */
+h1 {
+    margin-bottom: 15px;
+    color: #1e3a8a; /* azul oscuro */
+}
+
+p {
+    margin-bottom: 20px;
+    color: #1e3a8a;
+}
+
+/* Formulario */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    background: white;
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    width: 350px;
+}
+
+/* Inputs */
+form input {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #1e3a8a;
+    font-size: 14px;
+}
+
+/* Botón */
+form button {
+    padding: 12px 0;
+    border: none;
+    border-radius: 12px;
+    background: #2563eb; /* azul */
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+form button:hover {
+    background: #1d4ed8;
+    transform: scale(1.03);
+}
+
+/* Mensaje de error */
+p[style*="color:red"] {
+    color: red;
+    font-weight: bold;
+}
+
+/* Responsive para móviles */
+@media (max-width: 480px) {
+    form {
+        width: 90%;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    form button {
+        font-size: 14px;
+        padding: 10px 0;
+    }
+}
+
+/* Estilos generales */
+body.trips-taximeter {
+    font-family: Arial, sans-serif;
+    background-color: #f0f4ff; /* azul muy claro */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 20px;
+    margin: 0;
+    color: #1e3a8a; /* azul oscuro para textos */
+}
+
+/* Título */
+h1 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Tabla estilizada */
+table {
+    border-collapse: collapse;
+    width: 90%;
+    max-width: 800px;
+    background: white;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: center;
+    border-bottom: 1px solid #d1d5db;
+}
+
+th {
+    background-color: #2563eb; /* azul */
+    color: white;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #e6f0ff; /* azul muy claro para filas pares */
+}
+
+/* Última fila sin borde inferior */
+tr:last-child td {
+    border-bottom: none;
+}
+
+/* Botón volver */
+a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    background-color: #2563eb;
+    color: white;
+    font-weight: 600;
+    border-radius: 12px;
+    text-decoration: none;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+a:hover {
+    background-color: #1d4ed8;
+    transform: scale(1.03);
+}
+
+/* Responsive para móviles */
+@media (max-width: 480px) {
+    table, th, td {
+        font-size: 14px;
+        padding: 8px 10px;
+    }
+
+    a {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+}

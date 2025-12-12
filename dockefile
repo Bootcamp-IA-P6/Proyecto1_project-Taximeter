@@ -1,0 +1,20 @@
+# Imagen base de Python
+FROM python:3.10-slim
+
+# Crear directorio de trabajo dentro del contenedor
+WORKDIR /app
+
+# Copiar el archivo requirements.txt
+COPY requirements.txt .
+
+# Instalar dependencias
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copiar todo el proyecto al contenedor
+COPY . .
+
+# Puerto que expone tu aplicación (cámbialo si usas otro)
+EXPOSE 5000
+
+# Comando para ejecutar tu programa (ajústalo)
+CMD ["python", "app.py"]
