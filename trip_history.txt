@@ -1,32 +1,6 @@
-doc/implement-loggins
 --- Trip 2025-12-10 11:05:12 ---
 Stopped time: 10.0 seconds
 Moving time: 0.0 seconds
-Total fare: �0.20
-=======
- feature/unit-test
-Trip 2025-12-10 11:05:12
-Stopped time: 10.0 seconds
-Moving time: 0.0 seconds
-Total fare: €0.20
-
---- Trip 2025-12-07 13:47:17 ---
-Stopped time: 28.8 seconds
-Moving time: 339.9 seconds
-Total fare: ï¿½17.57
--------------------------------
-
---- Trip 2025-12-07 14:06:08 ---
-Stopped time: 12.1 seconds
-Moving time: 177.2 seconds
-Total fare: ï¿½9.10
--------------------------------
-
---- Trip 2025-12-07 14:23:17 ---
-Stopped time: 3.5 seconds
-Moving time: 0.0 seconds
-Total fare: €0.07
-feature/middle-level-project-taximeter
- feature/middle-level-project-taximeter
+Total fare: �0.20
 -------------------------------
 
