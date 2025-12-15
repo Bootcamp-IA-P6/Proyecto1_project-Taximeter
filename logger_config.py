@@ -14,7 +14,7 @@ if not os.path.exists(LOG_DIR):
 logger = logging.getLogger("taximeter_logger")
 logger.setLevel(logging.INFO)  # Nivel mínimo de logs
 
-# Formato de los logs
+
 formatter = logging.Formatter(
     "%(asctime)s [%(levelname)s] %(message)s",
     datefmt="%Y-%m-%d %H:%M:%S"
@@ -33,10 +33,4 @@ file_handler.setLevel(logging.INFO)
 file_handler.setFormatter(formatter)
 logger.addHandler(file_handler)
 
-# ==========================
-# Uso en cualquier módulo:
-# from logger_config import logger
-# logger.info("Mensaje de información")
-# logger.warning("Mensaje de advertencia")
-# logger.error("Mensaje de error")
-# ==========================
+
